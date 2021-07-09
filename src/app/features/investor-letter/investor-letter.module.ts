@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { LettersByQuarterComponent } from './views/letters-by-quarter/letters-by-quarter.component';
+import { QuarterLettersComponent } from './views/letters-by-quarter/quarter-letters.component';
 
 
 @NgModule({
   declarations: [
-    LettersByQuarterComponent
+    QuarterLettersComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    LettersByQuarterComponent
+    QuarterLettersComponent
   ]
 })
 export class InvestorLetterModule { }
