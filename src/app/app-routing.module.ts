@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InvestorLetterModule, QuarterLettersComponent } from './features/investor-letter';
+import { FundLettersModule, QuarterlyLettersComponent } from './features/fund-letters';
 
 const routes: Routes = [
   {
     path: '',
-    component: QuarterLettersComponent
+    component: QuarterlyLettersComponent
   }
 ];
 
@@ -14,7 +14,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
     initialNavigation: 'enabled'
 }),
-    InvestorLetterModule
+    FundLettersModule
   ],
   exports: [RouterModule]
 })
