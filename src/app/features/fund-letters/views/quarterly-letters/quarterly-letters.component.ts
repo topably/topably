@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LetterService } from '../../services/letter.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-quarterly-letters',
@@ -29,7 +30,8 @@ import { LetterService } from '../../services/letter.service';
 })
 export class QuarterlyLettersComponent implements OnInit {
 
-  quarterlyLetters$ = this.letterService.getLettersByQuarter('q2-2021');
+  quarterlyLetters$ = this.letterService.getLettersByQuarter('q2-2021')
+    .pipe(map(letters => letters.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())));
 
   constructor(private letterService: LetterService) {
   }

@@ -1,5 +1,5 @@
 export interface Letter {
-  date: Date;
+  date: string;
   title: string;
   description: string;
   url: string;
