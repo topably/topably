@@ -6,7 +6,7 @@ import { Letter } from '../../types/Letter';
   template: `
     <div class="card">
       <div class="card-content">
-        <span>{{letter.date | date: 'MMMM d'}}</span>
+        <span>{{letter.date | date:'MMMM d':'UTC'}}</span>
         <h3 class="title is-size-6 ellipsis is-ellipsis-1">
           <a class="has-text-dark" [title]="letter.title" [href]="letter.url">
             {{letter.title}}

@@ -14,7 +14,7 @@ import { map } from 'rxjs/operators';
           </h2>
           <br>
           <div class="columns">
-            <div class="column is-10">
+            <div class="column is-12">
               <div class="columns is-multiline">
                 <div class="column is-one-third" *ngFor="let letter of quarterlyLetters$ | async">
                   <app-letter-card [letter]="letter"></app-letter-card>
