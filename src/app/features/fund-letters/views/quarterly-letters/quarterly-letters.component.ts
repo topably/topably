@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { LetterService } from '../../services/letter.service';
-import { map } from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Letter } from '../../types/Letter';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-quarterly-letters',
@@ -9,7 +12,7 @@ import { Title } from '@angular/platform-browser';
     <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">Q2 2021 Hedge Fund Letters</h1>
+          <h1 class="title">{{pageTitlePrefix}} Hedge Fund Letters</h1>
           <h2 class="subtitle">
             Find out what is going on in the opaque world of hedge funds.
           </h2>
@@ -27,20 +30,29 @@ import { Title } from '@angular/platform-browser';
       </div>
     </section>
   `,
-  styleUrls: ['./quarterly-letters.component.scss']
+  styleUrls: ['./quarterly-letters.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class QuarterlyLettersComponent implements OnInit {
 
-  quarterlyLetters$ = this.letterService.getLettersByQuarter('q2-2021')
-    .pipe(map(letters => letters.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())));
+  quarter!: string;
 
-  constructor(private letterService: LetterService,
-              private titleService: Title) {
+  quarterlyLetters$!: Observable<Letter[]>;
+
+  pageTitlePrefix!: string;
+
+  constructor(public letterService: LetterService,
+              private titleService: Title,
+              private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    const quarter = 'Q2 2021';
-    this.titleService.setTitle(`${quarter} Hedge Fund Letters. ${quarter} Investor Letters`);
+    this.activatedRoute.url.pipe(first()).subscribe(urlSegment => {
+      this.quarter = urlSegment.length > 0 ? urlSegment[urlSegment.length - 1].path : 'q2-2021';
+      this.quarterlyLetters$ = this.letterService.getLettersByQuarter(this.quarter);
+      this.pageTitlePrefix = this.quarter.split('-').join(' ').toUpperCase();
+      this.titleService.setTitle(`${this.pageTitlePrefix} Hedge Fund Letters. ${this.pageTitlePrefix} Investor Letters`);
+    });
   }
 
 }

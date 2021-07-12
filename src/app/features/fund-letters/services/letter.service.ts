@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Letter } from '../types/Letter';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class LetterService {
   }
 
   getLettersByQuarter(quarter: string): Observable<Letter[]> {
-    return this.http.get<Letter[]>(`/assets/data/letters/${quarter}.json`);
+    return this.http.get<Letter[]>(`/assets/data/letters/${quarter}.json`)
+      .pipe(map(letters => letters.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())));
   }
 }
