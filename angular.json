@@ -29,7 +29,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/CNAME"
+              "src/CNAME",
+              "src/googlebd3eec9113ea5ce6.html"
             ],
             "styles": [
               "src/styles.scss"
