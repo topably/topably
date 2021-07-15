@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FundLettersModule } from './features/fund-letters';
-import { PageNotFoundComponent, ViewsModule } from './views/views';
+import { ComingSoonPageComponent, PageNotFoundComponent, ViewsModule } from './views/views';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'hedge-fund-letters',
-    pathMatch: 'full'
+    component: ComingSoonPageComponent
   },
   {
     path: '**',
