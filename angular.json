@@ -168,7 +168,8 @@
             "serverTarget": "topably:server:production",
             "routes": [
               "/"
-            ]
+            ],
+            "routesFile" : "app-routes"
           },
           "configurations": {
             "production": {}
