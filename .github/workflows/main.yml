@@ -21,6 +21,7 @@ jobs:
         run: |
           npm ci
           npm run prerender
+          npm run postprerender
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
