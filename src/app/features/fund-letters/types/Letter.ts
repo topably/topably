@@ -3,5 +3,6 @@ export interface Letter {
   title: string;
   description: string;
   url: string;
+  mentionedStocks: string[];
   fund: string;
 }

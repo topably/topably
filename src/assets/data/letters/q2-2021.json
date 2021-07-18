@@ -61,5 +61,13 @@
     "description": "",
     "url": "https://mcusercontent.com/ecdc9789db8ac15ad9607f3f6/files/37ed0e4e-201e-3501-874f-69ad3236db36/June_2021_Investor_Letter_There_s_a_Playbook_for_That.pdf",
     "fund": "Richie Capital Group"
+  },
+  {
+    "date": "2021-07-18T22:06:22.498Z",
+    "title": "Alger Mid Cap Focus Fund Commentary",
+    "description": "",
+    "url": "https://www.alger.com/AlgerDocuments/MidCapFocus_Fund_Commentary.pdf",
+    "fund": "Alger Associates",
+    "mentionedStocks": ["$NET", "$BSY", "$HUBS", "$DKNG", "$MGNI", "$DISCK"]
   }
 ]
