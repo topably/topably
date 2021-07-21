@@ -69,5 +69,13 @@
     "url": "https://www.alger.com/AlgerDocuments/MidCapFocus_Fund_Commentary.pdf",
     "fund": "Alger Associates",
     "mentionedStocks": ["$NET", "$BSY", "$HUBS", "$DKNG", "$MGNI", "$DISCK"]
+  },
+  {
+    "date": "2021-07-21T22:06:22.498Z",
+    "title": "Q2 2021: Strong Returns Continue",
+    "description": "",
+    "url": "https://static1.squarespace.com/static/54373ea8e4b0152f9d332f13/t/60f5143e81f38b20589bb696/1626674238831/2021+Q2.pdf",
+    "fund": "Blue Tower Asset Management",
+    "mentionedStocks": ["$CNR", "$TCS.L"]
   }
 ]
