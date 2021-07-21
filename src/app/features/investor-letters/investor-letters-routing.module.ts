@@ -2,8 +2,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { QuarterlyLettersComponent } from './views/quarterly-letters/quarterly-letters.component';
 import { environment } from '@env';
-import { eachQuarterOfInterval, subMonths } from 'date-fns';
-import { stringifyQuarter } from './helpers/quarter.helpers';
+import { eachQuarterOfInterval } from 'date-fns';
+import { getLatestQuarterDate, stringifyQuarter } from './helpers/quarter.helpers';
 
 function generateChildrenRoutes(start: Date, end: Date): Routes {
   const quarterRoutes = eachQuarterOfInterval({start, end})
@@ -16,13 +16,10 @@ function generateChildrenRoutes(start: Date, end: Date): Routes {
   ];
 }
 
-const today = new Date();
-const latestQuarterDate = subMonths(today, 3);
-
 const routes: Routes = [
   {
     path: 'investor-letters',
-    children: generateChildrenRoutes(environment.initialQuarterDate, latestQuarterDate)
+    children: generateChildrenRoutes(environment.initialQuarterDate, getLatestQuarterDate())
   },
 ];
 

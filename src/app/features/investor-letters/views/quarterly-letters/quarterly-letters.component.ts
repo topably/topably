@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Letter } from '../../types/Letter';
 import { first } from 'rxjs/operators';
+import { getLatestQuarterDate, stringifyQuarter } from '../../helpers/quarter.helpers';
 
 @Component({
   selector: 'app-quarterly-letters',
@@ -48,7 +49,7 @@ export class QuarterlyLettersComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.url.pipe(first()).subscribe(urlSegment => {
-      this.quarter = urlSegment.length > 0 ? urlSegment[urlSegment.length - 1].path : 'q2-2021';
+      this.quarter = urlSegment.length > 0 ? urlSegment[urlSegment.length - 1].path : stringifyQuarter(getLatestQuarterDate());
       this.quarterlyLetters$ = this.letterService.getLettersByQuarter(this.quarter);
       this.pageTitlePrefix = this.quarter.split('-').join(' ').toUpperCase();
       this.titleService.setTitle(`${this.pageTitlePrefix} Investor Letters. ${this.pageTitlePrefix} Hedge Fund Letters.`);
