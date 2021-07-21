@@ -21,7 +21,7 @@ const latestQuarterDate = subMonths(today, 3);
 
 const routes: Routes = [
   {
-    path: 'hedge-fund-letters',
+    path: 'investor-letters',
     children: generateChildrenRoutes(environment.initialQuarterDate, latestQuarterDate)
   },
 ];
@@ -30,6 +30,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class FundLettersRoutingModule {
+export class InvestorLettersRoutingModule {
 
 }

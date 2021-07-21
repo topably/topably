@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
               <p class="subtitle is-4">
                 Homepage of our website is under construction, but page that aggregates recent Investor Letters is ready. Check it out!
               </p>
-              <button class="button is-info is-large" [routerLink]="['/hedge-fund-letters']">
+              <button class="button is-info is-large" [routerLink]="['/investor-letters']">
                 Investor Letters
               </button>
             </div>
