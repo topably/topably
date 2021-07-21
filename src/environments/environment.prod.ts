@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  initialQuarterDate: new Date(2021, 1, 1)
 };

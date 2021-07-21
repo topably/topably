@@ -12,7 +12,7 @@ import { first } from 'rxjs/operators';
     <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">{{pageTitlePrefix}} Hedge Fund Letters</h1>
+          <h1 class="title">{{pageTitlePrefix}} Investor Letters</h1>
           <h2 class="subtitle">
             Find out what is going on in the opaque world of hedge funds.
           </h2>
@@ -51,7 +51,7 @@ export class QuarterlyLettersComponent implements OnInit {
       this.quarter = urlSegment.length > 0 ? urlSegment[urlSegment.length - 1].path : 'q2-2021';
       this.quarterlyLetters$ = this.letterService.getLettersByQuarter(this.quarter);
       this.pageTitlePrefix = this.quarter.split('-').join(' ').toUpperCase();
-      this.titleService.setTitle(`${this.pageTitlePrefix} Hedge Fund Letters. ${this.pageTitlePrefix} Investor Letters`);
+      this.titleService.setTitle(`${this.pageTitlePrefix} Investor Letters. ${this.pageTitlePrefix} Hedge Fund Letters.`);
     });
   }
 

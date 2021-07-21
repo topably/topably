@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaTagService.addTags([
-      { name: 'keywords', content: 'Investor letters, fund letters, fund reports' },
+      { name: 'keywords', content: 'Investor letters, fund letters, fund reports, letters to shareholders' },
       { name: 'robots', content: 'index, follow' },
     ]);
   }
