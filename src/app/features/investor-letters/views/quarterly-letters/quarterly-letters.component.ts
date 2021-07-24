@@ -15,7 +15,7 @@ import { getLatestQuarterDate, stringifyQuarter } from '../../helpers/quarter.he
         <div class="container">
           <h1 class="title">{{pageTitlePrefix}} Investor Letters</h1>
           <h2 class="subtitle">
-            Find out what is going on in the opaque world of hedge funds.
+            Find out what is going on in the opaque world of hedge funds and asset management firms.
           </h2>
           <br>
           <div class="columns">

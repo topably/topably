@@ -11,7 +11,6 @@ function generateChildrenRoutes(start: Date, end: Date): Routes {
       return {path: stringifyQuarter(quarterDate), component: QuarterlyLettersComponent};
     });
   return [
-    {path: '', component: QuarterlyLettersComponent},
     ...quarterRoutes
   ];
 }
