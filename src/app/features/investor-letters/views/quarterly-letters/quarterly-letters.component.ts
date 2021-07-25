@@ -3,7 +3,7 @@ import { LetterService } from '../../services/letter.service';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Letter } from '../../types/Letter';
+import { Letter } from '../../types/letter';
 import { first } from 'rxjs/operators';
 import { getLatestQuarterDate, stringifyQuarter } from '../../helpers/quarter.helpers';
 

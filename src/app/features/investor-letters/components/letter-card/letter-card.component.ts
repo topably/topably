@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Letter } from '../../types/Letter';
+import { Letter } from '../../types/letter';
 
 @Component({
   selector: 'app-letter-card',
