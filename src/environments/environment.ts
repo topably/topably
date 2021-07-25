@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  initialQuarterDate: new Date(2021, 1, 1)
+  initialQuarterDate: new Date(2021, 1, 1),
+  serverUrl: ''
 };
 
 /*
