@@ -170,9 +170,6 @@
           "options": {
             "browserTarget": "topably:build:production",
             "serverTarget": "topably:server:production",
-            "routes": [
-              "/"
-            ],
             "routesFile" : "app-routes"
           },
           "configurations": {
