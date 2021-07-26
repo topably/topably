@@ -68,7 +68,7 @@
     "description": "",
     "url": "https://www.alger.com/AlgerDocuments/MidCapFocus_Fund_Commentary.pdf",
     "fund": "Alger Associates",
-    "mentionedStocks": ["$NET", "$BSY", "$HUBS", "$DKNG", "$MGNI", "$DISCK"]
+    "mentionedStocks": ["NET", "BSY", "HUBS", "DKNG", "MGNI", "DISCK"]
   },
   {
     "date": "2021-07-21T22:06:22.498Z",
@@ -76,7 +76,7 @@
     "description": "",
     "url": "https://static1.squarespace.com/static/54373ea8e4b0152f9d332f13/t/60f5143e81f38b20589bb696/1626674238831/2021+Q2.pdf",
     "fund": "Blue Tower Asset Management",
-    "mentionedStocks": ["$CNR", "$TCS.L"]
+    "mentionedStocks": ["CNR", "TCS.L"]
   },
   {
     "date": "2021-07-25T19:06:22.498Z",
@@ -85,5 +85,13 @@
     "url": "https://1ff55a09-c905-429a-8983-9112f20bb3a2.filesusr.com/ugd/de07f6_93a7743bb3f24198a2d79dad4efa8a48.pdf",
     "fund": "Spree Capital",
     "mentionedStocks": []
+  },
+  {
+    "date": "2021-07-26T19:06:22.498Z",
+    "title": "Portfolio update",
+    "description": "",
+    "url": "https://mcusercontent.com/4522df4fcbfa5be002117f260/files/3cd573d6-c6af-df8d-1f11-b54ad9029285/Maran_Partners_Fund_LP_2021_2Q_Letter.pdf",
+    "fund": "Maran Capital Management",
+    "mentionedStocks": ["CRSS", "CTT.LS", "CLAR", "PCYO"]
   }
 ]
