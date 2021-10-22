@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LetterCardComponent } from './components/letter-card/letter-card.component';
 import { QuarterlyLettersComponent } from './views/quarterly-letters/quarterly-letters.component';
 import { InvestorLettersRoutingModule } from './investor-letters-routing.module';
+import { LayoutModule } from '../../layout/layout.module';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { InvestorLettersRoutingModule } from './investor-letters-routing.module'
   ],
   imports: [
     CommonModule,
+    LayoutModule,
     InvestorLettersRoutingModule
   ],
   exports: [

@@ -27,6 +27,8 @@
     "@angular/platform-browser-dynamic": "~11.2.6",
     "@angular/platform-server": "~11.2.6",
     "@angular/router": "~11.2.6",
+    "@azure/msal-angular": "^2.0.4",
+    "@azure/msal-browser": "^2.18.0",
     "@nguniversal/express-engine": "^11.2.1",
     "bulma": "^0.9.3",
     "date-fns": "^2.22.1",

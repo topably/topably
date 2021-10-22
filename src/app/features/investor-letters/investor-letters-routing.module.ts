@@ -4,6 +4,7 @@ import { QuarterlyLettersComponent } from './views/quarterly-letters/quarterly-l
 import { environment } from '@env';
 import { eachQuarterOfInterval } from 'date-fns';
 import { getLatestQuarterDate, stringifyQuarter } from './helpers/quarter.helpers';
+import { SingleColumnLayoutComponent } from '../../layout/single-column-layout/single-column-layout.component';
 
 function generateChildrenRoutes(start: Date, end: Date): Routes {
   const quarterRoutes = eachQuarterOfInterval({start, end})
@@ -18,6 +19,7 @@ function generateChildrenRoutes(start: Date, end: Date): Routes {
 const routes: Routes = [
   {
     path: 'investor-letters',
+    component: SingleColumnLayoutComponent,
     children: generateChildrenRoutes(environment.initialQuarterDate, getLatestQuarterDate())
   },
 ];
